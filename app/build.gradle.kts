@@ -87,9 +87,6 @@ dependencies {
     implementation(Libs.Others.coil)
     implementation(Libs.Accompanist.navigationAnim)
 
-    implementation(Libs.LibSu.core)
-    implementation(Libs.LibSu.io)
-
     implementation(Libs.Hilt.library)
     add("kapt", Libs.Hilt.googleAndroidCompiler)
     add("kapt", Libs.Hilt.googleCompiler)

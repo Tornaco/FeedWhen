@@ -11,3 +11,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "FeedWhen"
 include(":app")
+include(":presentation")
+include(":data")
+include(":domain")

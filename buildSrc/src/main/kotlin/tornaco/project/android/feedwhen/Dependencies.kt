@@ -74,20 +74,4 @@ object Libs {
         const val navigationAnim =
             "com.google.accompanist:accompanist-navigation-animation:$version"
     }
-
-    object LibSu {
-        private const val libSuVersion = "3.1.2"
-
-        // The core module is used by all other components
-        const val core = "com.github.topjohnwu.libsu:core:$libSuVersion"
-
-        // Optional: APIs for creating root services
-        const val service = "com.github.topjohnwu.libsu:service:$libSuVersion"
-
-        // Optional: For com.topjohnwu.superuser.io classes
-        const val io = "com.github.topjohnwu.libsu:io:$libSuVersion"
-
-        // Optional: Bundle prebuilt BusyBox binaries
-        const val busybox = "com.github.topjohnwu.libsu:busybox:$libSuVersion"
-    }
 }
