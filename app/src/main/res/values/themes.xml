@@ -1,0 +1,13 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.FeedWhen" parent="Theme.MaterialComponents.DayNight.DarkActionBar" />
+
+    <style name="Theme.FeedWhen.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FeedWhen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FeedWhen.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
