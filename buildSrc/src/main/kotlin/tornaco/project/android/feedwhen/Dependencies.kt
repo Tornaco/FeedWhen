@@ -2,11 +2,11 @@ package tornaco.project.android.feedwhen
 
 object ClassPaths {
     const val gradlePlugin = "com.android.tools.build:gradle:7.0.0"
-    const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10"
+    const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
 }
 
 object Compose {
-    const val composeVersion = "1.0.0"
+    const val composeVersion = "1.1.0-alpha01"
 
     const val animation = "androidx.compose.animation:animation:$composeVersion"
     const val iconsExtended = "androidx.compose.material:material-icons-extended:$composeVersion"
@@ -30,6 +30,9 @@ object Tests {
 
     const val junit = "junit:junit:$junitVersion"
     const val junitKotlin = "androidx.test.ext:junit-ktx:$junitKtx"
+    const val mockk = "io.mockk:mockk:1.12.0"
+    const val mockito = "org.mockito:mockito-core:3.3.3"
+    const val androidXCoreTest = "androidx.arch.core:core-testing:2.1.0"
 }
 
 object Core {
@@ -64,9 +67,22 @@ object Libs {
         const val lifeCycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
     }
 
+    object Room {
+        private const val roomVersion = "2.4.0-alpha04"
+        const val runtime = "androidx.room:room-runtime:$roomVersion"
+        const val annotationProcessor = "androidx.room:room-compiler:$roomVersion"
+        const val ktx = "androidx.room:room-ktx:$roomVersion"
+        const val testing = "androidx.room:room-testing:$roomVersion"
+    }
+
     object Others {
         const val timber = "com.jakewharton.timber:timber:4.7.1"
         const val coil = "io.coil-kt:coil-compose:1.3.2"
+        const val retrofit = "com.squareup.retrofit2:retrofit:2.7.1"
+        const val retrofit_converter_gson = "com.squareup.retrofit2:converter-gson:2.7.1"
+
+        // for testing retrofit.
+        const val mockwebserver = "com.squareup.okhttp3:mockwebserver:4.7.2"
     }
 
     object Accompanist {

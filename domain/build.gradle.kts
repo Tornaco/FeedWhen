@@ -26,7 +26,7 @@ android {
     }
 
     buildFeatures {
-        compose = true
+        compose = false
         buildConfig = false
         aidl = false
         renderScript = false

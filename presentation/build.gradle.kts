@@ -43,8 +43,24 @@ dependencies {
     implementation(Libs.Kotlin.stdlib)
     implementation(Libs.Coroutines.android)
 
+    implementation(Core.androidXCore)
+    implementation(Core.appCompat)
+    implementation(Core.material)
+    implementation(Compose.runtimeSaveAble)
+    implementation(Compose.ui)
+    implementation(Compose.runtime)
+    implementation(Compose.material)
+    implementation(Compose.activityCompose)
+    implementation(Compose.viewmodel)
+    implementation(Compose.navigationCompose)
+    implementation(Compose.hiltNavigation)
+    implementation(Compose.tooling)
+    implementation(Compose.toolingPreview)
+    implementation(Libs.AndroidX.lifeCycleRuntime)
+
     implementation(Libs.Others.timber)
 
+    implementation(project(":domain"))
 
     implementation(Libs.Hilt.library)
     add("kapt", Libs.Hilt.googleAndroidCompiler)
@@ -52,4 +68,8 @@ dependencies {
 
     testImplementation(Tests.junit)
     testImplementation(Tests.junitKotlin)
+    testImplementation(Tests.mockk)
+    testImplementation(Tests.mockito)
+    testImplementation(Tests.androidXCoreTest)
+    testImplementation(Libs.Room.testing)
 }

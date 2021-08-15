@@ -71,6 +71,7 @@ dependencies {
     implementation(Core.material)
     implementation(Compose.runtimeSaveAble)
     implementation(Compose.ui)
+    implementation(Compose.runtime)
     implementation(Compose.material)
     implementation(Compose.activityCompose)
     implementation(Compose.viewmodel)

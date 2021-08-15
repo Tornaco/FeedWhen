@@ -1,4 +1,7 @@
-import tornaco.project.android.feedwhen.*
+import tornaco.project.android.feedwhen.Compose
+import tornaco.project.android.feedwhen.Configs
+import tornaco.project.android.feedwhen.Libs
+import tornaco.project.android.feedwhen.Tests
 
 plugins {
     id("com.android.library")
@@ -26,7 +29,7 @@ android {
     }
 
     buildFeatures {
-        compose = true
+        compose = false
         buildConfig = false
         aidl = false
         renderScript = false
@@ -44,12 +47,25 @@ dependencies {
     implementation(Libs.Coroutines.android)
 
     implementation(Libs.Others.timber)
+    implementation(Libs.Others.retrofit)
+    implementation(Libs.Others.retrofit_converter_gson)
+    implementation(Libs.Others.mockwebserver)
 
+
+    implementation(Libs.Room.runtime)
+    implementation(Libs.Room.ktx)
+    add("kapt", Libs.Room.annotationProcessor)
 
     implementation(Libs.Hilt.library)
     add("kapt", Libs.Hilt.googleAndroidCompiler)
     add("kapt", Libs.Hilt.googleCompiler)
 
+    implementation(project(":domain"))
+
     testImplementation(Tests.junit)
     testImplementation(Tests.junitKotlin)
+    testImplementation(Tests.mockk)
+    testImplementation(Tests.mockito)
+    testImplementation(Tests.androidXCoreTest)
+    testImplementation(Libs.Room.testing)
 }
