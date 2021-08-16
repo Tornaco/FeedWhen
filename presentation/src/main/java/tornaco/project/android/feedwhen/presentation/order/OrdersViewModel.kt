@@ -15,7 +15,6 @@ class OrdersViewModel @Inject constructor(private val getOrders: GetOrders) : Vi
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState
 
-
     fun handleUiAction(uiAction: UiAction) {
 
     }

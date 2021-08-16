@@ -71,5 +71,6 @@ dependencies {
     testImplementation(Tests.mockk)
     testImplementation(Tests.mockito)
     testImplementation(Tests.androidXCoreTest)
+    testImplementation(Tests.ktxCoroutinesTest)
     testImplementation(Libs.Room.testing)
 }

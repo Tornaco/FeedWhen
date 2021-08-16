@@ -2,22 +2,32 @@ package tornaco.project.android.feedwhen.presentation.order
 
 import io.mockk.every
 import io.mockk.mockk
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.test.runBlockingTest
+import org.junit.Rule
 import org.junit.Test
 import tornaco.project.android.feedwhen.domain.model.Order
 import tornaco.project.android.feedwhen.domain.usecase.Result
 import tornaco.project.android.feedwhen.domain.usecase.Result.Success
 import tornaco.project.android.feedwhen.domain.usecase.order.GetOrders
+import tornaco.project.android.feenwhen.MainCoroutineRule
 
 
+@ObsoleteCoroutinesApi
+@ExperimentalCoroutinesApi
 internal class OrdersViewModelTest {
+    @ExperimentalCoroutinesApi
+    @get:Rule
+    var mainCoroutineRule = MainCoroutineRule()
 
     @Test
     fun `given success with order list when fetch all orders then uiState should updated with non empty list`() {
         // Given
-        val mockUseCase = mockk<GetOrders>()
+        val mockUseCase = mockk<GetOrders>(relaxed = false)
         every {
-            mockUseCase.execute(any())
+            mockUseCase.invoke(any())
         } returns flow<Result<List<Order>>> {
             emit(Success(listOf(
                 Order(orderId = "111", submitTimeMills = 111L),
@@ -34,11 +44,14 @@ internal class OrdersViewModelTest {
 
         val viewModel = OrdersViewModel(mockUseCase)
 
-        // When
-        viewModel.fetchAllOrders()
+        runBlockingTest {
+            // When
+            viewModel.fetchAllOrders()
 
-        assert(viewModel.uiState.value.isLoading.not())
-        assert(viewModel.uiState.value.orderList.size == 10)
+            assert(viewModel.uiState.value.orderList.size == 9)
+            assert(viewModel.uiState.value.orderList[1].orderId == "222")
+            assert(viewModel.uiState.value.isLoading.not())
+        }
     }
 
     @Test
@@ -57,6 +70,6 @@ internal class OrdersViewModelTest {
         viewModel.fetchAllOrders()
 
         assert(viewModel.uiState.value.isLoading.not())
-        assert(viewModel.uiState.value.orderList.size == 0)
+        assert(viewModel.uiState.value.orderList.isEmpty())
     }
 }
