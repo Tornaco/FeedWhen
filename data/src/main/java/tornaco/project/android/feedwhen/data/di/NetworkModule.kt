@@ -13,15 +13,19 @@ import tornaco.project.android.feedwhen.data.source.remote.OrderRemoteDataSource
 class NetworkModule {
 
     internal object Constant {
-        internal const val BASE_URL = "http://dummy.project.com/api/v1/"
+        internal const val BASE_URL = "https://api.themoviedb.org/3/"
     }
 
     @Provides
-    fun provideRetrofit(): Retrofit {
+    fun provideRetrofitBuilder(): Retrofit.Builder {
         return Retrofit.Builder()
             .baseUrl(Constant.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .build()
+    }
+
+    @Provides
+    fun provideRetrofit(builder: Retrofit.Builder): Retrofit {
+        return builder.build()
     }
 
     @Provides

@@ -65,7 +65,6 @@ dependencies {
     testImplementation(Tests.junit)
     testImplementation(Tests.junitKotlin)
     testImplementation(Tests.mockk)
-    testImplementation(Tests.mockito)
     testImplementation(Tests.androidXCoreTest)
     testImplementation(Libs.Room.testing)
 }

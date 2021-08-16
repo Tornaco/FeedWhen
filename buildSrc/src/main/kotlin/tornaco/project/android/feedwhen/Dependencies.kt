@@ -82,7 +82,7 @@ object Libs {
         const val retrofit_converter_gson = "com.squareup.retrofit2:converter-gson:2.7.1"
 
         // for testing retrofit.
-        const val mockwebserver = "com.squareup.okhttp3:mockwebserver:4.7.2"
+        const val mockwebserver = "com.squareup.okhttp3:mockwebserver:4.9.1"
     }
 
     object Accompanist {

@@ -13,7 +13,7 @@ import tornaco.project.android.feedwhen.domain.usecase.order.GetOrders
 internal class OrdersViewModelTest {
 
     @Test
-    fun `given success with order list when fetch all orders then uiState should updated with non emoty list`() {
+    fun `given success with order list when fetch all orders then uiState should updated with non empty list`() {
         // Given
         val mockUseCase = mockk<GetOrders>()
         every {
