@@ -9,8 +9,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FeedWhen"
+rootProject.name = "RenNiXing"
 include(":app")
-include(":presentation")
-include(":data")
-include(":domain")

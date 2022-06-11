@@ -12,9 +12,9 @@ plugins {
 
 gradlePlugin {
     plugins {
-        register("FeedWhenPlugin") {
-            id = "FeedWhenPlugin"
-            implementationClass = "tornaco.project.android.feedwhen.FeedWhenPlugin"
+        register("rennixingPlugin") {
+            id = "rennixingPlugin"
+            implementationClass = "tornaco.project.android.rennixing.rennixingPlugin"
         }
     }
 }

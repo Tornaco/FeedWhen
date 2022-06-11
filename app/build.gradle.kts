@@ -1,4 +1,4 @@
-import tornaco.project.android.feedwhen.*
+import tornaco.project.android.rennixing.*
 
 plugins {
     id("com.android.application")
@@ -94,4 +94,72 @@ dependencies {
 
     testImplementation(Tests.junit)
     testImplementation(Tests.junitKotlin)
+
+    implementation(Libs.Kotlin.stdlib)
+    implementation(Libs.Coroutines.android)
+
+    implementation(Libs.Others.timber)
+
+
+    implementation(Libs.Hilt.library)
+    add("kapt", Libs.Hilt.googleAndroidCompiler)
+    add("kapt", Libs.Hilt.googleCompiler)
+
+    testImplementation(Tests.junit)
+    testImplementation(Tests.junitKotlin)
+
+    implementation(Libs.Kotlin.stdlib)
+    implementation(Libs.Coroutines.android)
+
+    implementation(Libs.Others.timber)
+    implementation(Libs.Others.retrofit)
+    implementation(Libs.Others.retrofit_converter_gson)
+    implementation(Libs.Others.mockwebserver)
+
+
+    implementation(Libs.Room.runtime)
+    implementation(Libs.Room.ktx)
+    add("kapt", Libs.Room.annotationProcessor)
+
+    implementation(Libs.Hilt.library)
+    add("kapt", Libs.Hilt.googleAndroidCompiler)
+    add("kapt", Libs.Hilt.googleCompiler)
+
+    testImplementation(Tests.junit)
+    testImplementation(Tests.junitKotlin)
+    testImplementation(Tests.mockk)
+    testImplementation(Tests.androidXCoreTest)
+    testImplementation(Libs.Room.testing)
+
+    implementation(Libs.Kotlin.stdlib)
+    implementation(Libs.Coroutines.android)
+
+    implementation(Core.androidXCore)
+    implementation(Core.appCompat)
+    implementation(Core.material)
+    implementation(Compose.runtimeSaveAble)
+    implementation(Compose.ui)
+    implementation(Compose.runtime)
+    implementation(Compose.material)
+    implementation(Compose.activityCompose)
+    implementation(Compose.viewmodel)
+    implementation(Compose.navigationCompose)
+    implementation(Compose.hiltNavigation)
+    implementation(Compose.tooling)
+    implementation(Compose.toolingPreview)
+    implementation(Libs.AndroidX.lifeCycleRuntime)
+
+    implementation(Libs.Others.timber)
+
+    implementation(Libs.Hilt.library)
+    add("kapt", Libs.Hilt.googleAndroidCompiler)
+    add("kapt", Libs.Hilt.googleCompiler)
+
+    testImplementation(Tests.junit)
+    testImplementation(Tests.junitKotlin)
+    testImplementation(Tests.mockk)
+    testImplementation(Tests.mockito)
+    testImplementation(Tests.androidXCoreTest)
+    testImplementation(Tests.ktxCoroutinesTest)
+    testImplementation(Libs.Room.testing)
 }

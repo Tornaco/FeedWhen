@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="tornaco.project.android.feedwhen">
+    package="tornaco.project.android.rennixing">
 
     <application
-        android:name=".FeedWhenApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FeedWhen">
+        android:theme="@style/Theme.rennixing">
         <activity
-            android:name=".MainActivity"
+            android:name="tornaco.project.android.rennixing.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.FeedWhen.NoActionBar">
+            android:theme="@style/Theme.rennixing.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
