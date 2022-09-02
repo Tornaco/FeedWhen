@@ -14,13 +14,13 @@ gradlePlugin {
     plugins {
         register("rennixingPlugin") {
             id = "rennixingPlugin"
-            implementationClass = "tornaco.project.android.rennixing.rennixingPlugin"
+            implementationClass = "tornaco.project.android.rennixing.RennixingPlugin"
         }
     }
 }
 
 object BuildPluginsVersion {
-    val AGP = System.getenv("VERSION_AGP") ?: "7.2.1"
+    const val AGP = "7.2.1"
     const val DOKKA = "1.5.31"
     const val KOTLIN = "1.5.31"
     const val KOTLIN_LANG_VERSION = "1.5"
@@ -60,10 +60,10 @@ object Libs {
 dependencies {
     implementation("org.eclipse.jgit:org.eclipse.jgit:5.10.0.202012080955-r")
 
-    compileOnly(gradleApi())
-    compileOnly(Libs.AGP)
-    compileOnly(Libs.PROGUARD)
+    implementation(gradleApi())
+    implementation(Libs.AGP)
+    implementation(Libs.PROGUARD)
 
-    compileOnly(Libs.ASM)
-    compileOnly(Libs.ASM_COMMONS)
+    implementation(Libs.ASM)
+    implementation(Libs.ASM_COMMONS)
 }
