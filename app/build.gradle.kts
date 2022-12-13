@@ -11,7 +11,6 @@ plugins {
 android {
     defaultConfig {
         applicationId = Configs.appId
-        vectorDrawables.useSupportLibrary = true
         versionName = Configs.versionName
         versionCode = Configs.versionCode
         minSdk = Configs.minSdkVersion
@@ -54,11 +53,6 @@ android {
 
     buildFeatures {
         compose = true
-        buildConfig = false
-        aidl = false
-        renderScript = false
-        resValues = false
-        shaders = false
     }
 
     composeOptions {
@@ -75,14 +69,10 @@ dependencies {
     implementation(Compose.runtime)
     implementation(Compose.material)
     implementation(Compose.activityCompose)
-    implementation(Compose.viewmodel)
-    implementation(Compose.navigationCompose)
-    implementation(Compose.hiltNavigation)
     implementation(Compose.tooling)
     implementation(Compose.toolingPreview)
     implementation(Libs.AndroidX.lifeCycleRuntime)
 
-    implementation(Libs.Kotlin.stdlib)
     implementation(Libs.Coroutines.android)
 
     implementation(Libs.Others.timber)
@@ -93,22 +83,6 @@ dependencies {
     add("kapt", Libs.Hilt.googleAndroidCompiler)
     add("kapt", Libs.Hilt.googleCompiler)
 
-    testImplementation(Tests.junit)
-    testImplementation(Tests.junitKotlin)
-
-    implementation(Libs.Kotlin.stdlib)
-    implementation(Libs.Coroutines.android)
-
-    implementation(Libs.Others.timber)
-
-
-    implementation(Libs.Hilt.library)
-    add("kapt", Libs.Hilt.googleAndroidCompiler)
-    add("kapt", Libs.Hilt.googleCompiler)
-
-    testImplementation(Tests.junit)
-    testImplementation(Tests.junitKotlin)
-
     implementation(Libs.Kotlin.stdlib)
     implementation(Libs.Coroutines.android)
 
@@ -117,50 +91,13 @@ dependencies {
     implementation(Libs.Others.retrofit_converter_gson)
     implementation(Libs.Others.mockwebserver)
 
-
     implementation(Libs.Room.runtime)
     implementation(Libs.Room.ktx)
     add("kapt", Libs.Room.annotationProcessor)
 
-    implementation(Libs.Hilt.library)
-    add("kapt", Libs.Hilt.googleAndroidCompiler)
-    add("kapt", Libs.Hilt.googleCompiler)
-
     testImplementation(Tests.junit)
     testImplementation(Tests.junitKotlin)
     testImplementation(Tests.mockk)
     testImplementation(Tests.androidXCoreTest)
-    testImplementation(Libs.Room.testing)
-
-    implementation(Libs.Kotlin.stdlib)
-    implementation(Libs.Coroutines.android)
-
-    implementation(Core.androidXCore)
-    implementation(Core.appCompat)
-    implementation(Core.material)
-    implementation(Compose.runtimeSaveAble)
-    implementation(Compose.ui)
-    implementation(Compose.runtime)
-    implementation(Compose.material)
-    implementation(Compose.activityCompose)
-    implementation(Compose.viewmodel)
-    implementation(Compose.navigationCompose)
-    implementation(Compose.hiltNavigation)
-    implementation(Compose.tooling)
-    implementation(Compose.toolingPreview)
-    implementation(Libs.AndroidX.lifeCycleRuntime)
-
-    implementation(Libs.Others.timber)
-
-    implementation(Libs.Hilt.library)
-    add("kapt", Libs.Hilt.googleAndroidCompiler)
-    add("kapt", Libs.Hilt.googleCompiler)
-
-    testImplementation(Tests.junit)
-    testImplementation(Tests.junitKotlin)
-    testImplementation(Tests.mockk)
-    testImplementation(Tests.mockito)
-    testImplementation(Tests.androidXCoreTest)
-    testImplementation(Tests.ktxCoroutinesTest)
     testImplementation(Libs.Room.testing)
 }

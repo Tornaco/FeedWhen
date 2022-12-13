@@ -2,7 +2,7 @@ package tornaco.project.android.rennixing
 
 object ClassPaths {
     const val gradlePlugin = "com.android.tools.build:gradle:7.2.1"
-    const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
+    const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
 }
 
 object Compose {
@@ -18,10 +18,8 @@ object Compose {
     const val ui = "androidx.compose.ui:ui:$composeVersion"
     const val uiUtil = "androidx.compose.ui:ui-util:$composeVersion"
     const val uiTest = "androidx.compose.ui:ui-test-junit4:$composeVersion"
-    const val activityCompose = "androidx.activity:activity-compose:1.5.1"
-    const val navigationCompose = "androidx.navigation:navigation-compose:2.5.1"
+    const val activityCompose = "androidx.activity:activity-compose:1.6.1"
     const val hiltNavigation = "androidx.hilt:hilt-navigation-compose:1.0.0"
-    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
 }
 
 object Tests {
